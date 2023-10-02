@@ -1,0 +1,154 @@
+/* Fundo da página */
+body {
+    background-color: #000000;
+    overflow: hidden;
+}
+
+/* Efeito de gradiente no fundo */
+main::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    width: 85.5vw;
+    background: linear-gradient(-233deg, rgba(0, 0, 0, 100), rgba(0, 0, 0, .85) 40%, rgba(0, 0, 2, 0.5) 65%) no-repeat;
+}
+
+/* Estilos dos personagens */
+main .personagem {
+    display: none;
+    height: 100vh;
+    
+}
+
+main .personagem.selecionado {
+    display: block;
+}
+
+/* Estilos das imagens dos personagens */
+main .personagem .imagem {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* Estilos do conteúdo */
+.conteudo {
+    position: absolute;
+    top: 0;
+    left: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    max-width: 380px;
+    z-index: 1;
+}
+
+/* Estilos dos nomes dos personagens */
+.conteudo .nome-personagem {
+    color: #8B0000;
+    font-size: 65px;
+    font-family: "Reed";
+    font-weight: 400;
+    
+    position: absolute;
+    height: 300px;
+}
+
+/* Estilos específicos para o personagem "rpg" */
+.conteudo .nome-personagem.rpg {
+    color: #8B0000;
+    font-family: 'Cinzel', serif;
+    font-size: 45px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+/* Estilos das histórias */
+.conteudo .historia {
+    color: #ffffff;
+    font-family: 'Crimson Text', serif;
+    line-height: 25px;
+    width: 450px;
+    height: 100px;
+}
+
+
+/* Estilos do logotipo */
+.conteudo .logo {
+    background-image: url("../imagens/logo_vampiro-removebg-preview_resized.png");
+    position: absolute;
+    background-size: cover;
+    top: 0;
+    right: 220px;
+    height: 150px;
+    width: 300px;
+    margin-bottom: 35px;
+}
+
+/* Estilos dos botões */
+.botoes {
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 180px;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.botoes .botao {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.botoes .botao   img {
+    border-radius: 50%;
+}
+
+/* Estilos do botão selecionado */
+.botoes .botao.selecionado {
+    transform: scale(1.2);
+    box-shadow: 0 0 10px #8B0000;
+    border-radius: 50%;
+}
+/* Estilos do botão */
+.botao {
+    border: none;
+    background: none;
+    cursor: pointer;
+    position: relative;
+}
+
+/* Estilos do botão */
+.botao {
+    border: none;
+    background: none;
+    cursor: pointer;
+    position: relative;
+}
+
+/* Efeito de animação ao passar o mouse sobre o ícone */
+.botao:hover img {
+    transform: scale(1.2); /* Aumenta o tamanho do ícone */
+    opacity: 0.7; /* Reduz a opacidade para um efeito de piscar */
+    animation: blink 1s infinite alternate; /* Adiciona a animação de piscar */
+}
+
+/* Animação de piscar */
+@keyframes blink {
+    0% {
+        opacity: 0.7;
+    }
+    100% {
+        opacity: 1;
+    }
+}
