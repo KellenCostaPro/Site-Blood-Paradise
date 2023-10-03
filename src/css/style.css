@@ -1,7 +1,7 @@
 /* Fundo da página */
 body {
     background-color: #000000;
-    overflow: hidden;
+    
 }
 
 /* Efeito de gradiente no fundo */
@@ -11,7 +11,7 @@ main::after {
     top: 0;
     left: 0;
     min-height: 100vh;
-    width: 85.5vw;
+    width: 80vw;
     background: linear-gradient(-233deg, rgba(0, 0, 0, 100), rgba(0, 0, 0, .85) 40%, rgba(0, 0, 2, 0.5) 65%) no-repeat;
 }
 
@@ -32,8 +32,6 @@ main .personagem .imagem {
     height: 100%;
     object-fit: cover;
 }
-
-
 /* Estilos do conteúdo */
 .conteudo {
     position: absolute;
@@ -53,9 +51,7 @@ main .personagem .imagem {
     font-size: 65px;
     font-family: "Reed";
     font-weight: 400;
-    
-    position: absolute;
-    height: 300px;
+    margin-bottom: 20px;
 }
 
 /* Estilos específicos para o personagem "rpg" */
@@ -64,6 +60,7 @@ main .personagem .imagem {
     font-family: 'Cinzel', serif;
     font-size: 45px;
     font-weight: 600;
+    margin-bottom: 20px;
     white-space: nowrap;
 }
 
@@ -71,21 +68,15 @@ main .personagem .imagem {
 .conteudo .historia {
     color: #ffffff;
     font-family: 'Crimson Text', serif;
-    line-height: 25px;
-    width: 450px;
-    height: 100px;
+    line-height: 24px;
 }
-
 
 /* Estilos do logotipo */
 .conteudo .logo {
     background-image: url("../imagens/logo_vampiro-removebg-preview_resized.png");
-    position: absolute;
     background-size: cover;
-    top: 0;
-    right: 220px;
-    height: 150px;
-    width: 300px;
+    height: 100px;
+    width: 230px;
     margin-bottom: 35px;
 }
 
@@ -101,13 +92,12 @@ main .personagem .imagem {
     justify-content: center;
     align-items: center;
     gap: 20px;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 .botoes .botao {
-    border: none;
-    background: none;
     cursor: pointer;
+    border-radius: 50%;
 }
 
 .botoes .botao   img {
@@ -128,22 +118,13 @@ main .personagem .imagem {
     position: relative;
 }
 
-/* Estilos do botão */
-.botao {
-    border: none;
-    background: none;
-    cursor: pointer;
-    position: relative;
-}
 
-/* Efeito de animação ao passar o mouse sobre o ícone */
 .botao:hover img {
-    transform: scale(1.2); /* Aumenta o tamanho do ícone */
-    opacity: 0.7; /* Reduz a opacidade para um efeito de piscar */
-    animation: blink 1s infinite alternate; /* Adiciona a animação de piscar */
+    transform: scale(1.2); 
+    opacity: 0.7; 
+    animation: blink 1s infinite alternate; 
 }
 
-/* Animação de piscar */
 @keyframes blink {
     0% {
         opacity: 0.7;
